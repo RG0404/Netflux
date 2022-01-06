@@ -5,16 +5,39 @@
       <ul class="carousel-items">
         <li class="carousel-item" v-for="item in movies" :key="item.id">
           <div class="card">
-            <h2 class="card-title" >{{ item.title }}</h2>
             <img :src="item.image" >
           </div>
         </li>
       </ul>
+    </section>
 
+    <section class="carousel">
+      <h1>Top Séries TV</h1>
       <ul class="carousel-items">
         <li class="carousel-item" v-for="item in series" :key="item.id">
           <div class="card">
-            <h2 class="card-title" >{{ item.title }}</h2>
+            <img :src="item.image" >
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="carousel">
+      <h1>Les plus populaires</h1>
+      <ul class="carousel-items">
+        <li class="carousel-item" v-for="item in popular" :key="item.id">
+          <div class="card">
+            <img :src="item.image" >
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="carousel">
+      <h1>Coming Soon..</h1>
+      <ul class="carousel-items">
+        <li class="carousel-item" v-for="item in soon" :key="item.id">
+          <div class="card">
             <img :src="item.image" >
           </div>
         </li>
@@ -28,7 +51,9 @@
     name: 'Slider',
     props: [
         'movies',
-        'series'
+        'series',
+        'soon',
+        'popular',
     ]
   }
 </script>
@@ -37,7 +62,7 @@
 
 .carousel {
   margin-top: 5%;
-  margin: 2rem 2rem 1rem;
+  margin: 2rem 2rem 6rem;
 }
 
 h1 {
@@ -91,14 +116,13 @@ header {
 }
 
 .card {
-  border: 1px solid #bac6d3;
-  border-radius: 8px;
   padding: 1rem;
 }
 
 .card img {
   width: 400px;
-  height: 300px;
+  height: 400px;
+  border-radius: 10px;
 }
 
 /********************************
@@ -110,6 +134,7 @@ header {
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
   margin-top: 5%;
+  gap: 20px;
 }
 
 .carousel-item {
