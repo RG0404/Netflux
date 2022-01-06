@@ -4,56 +4,56 @@
       <ul class="carousel-items">
         <li class="carousel-item">
           <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <h2 class="card-title" v-for="movie in movies" :key="movie.id"> {{ movie.title }}</h2>
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
+          </div>
+        </li>
+        <li class="carousel-item">
+          <div class="card">
+            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{movie.title}}</h2>
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
         <li class="carousel-item">
           <div class="card">
             <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" />
+            <img src="https://placeimg.com/572/322/animals" alt="" />
           </div>
         </li>
       </ul>
@@ -63,7 +63,10 @@
 
 <script>
   export default {
-    name: 'Slider'
+    name: 'Slider',
+    props: [
+        'movies',
+    ]
   }
 </script>
 
@@ -78,58 +81,6 @@ h1 {
 h2 {
   font-size: 1.25rem;
   margin-top: 0;
-}
-
-a {
-  color: inherit;
-  transition: 0.25s all ease-in-out;
-}
-
-a:visited {
-  color: #3d4852;
-}
-
-a:hover,
-a:focus,
-a:active {
-  background-color: #3d4852;
-  color: white;
-}
-
-a:focus {
-  outline: thin solid #3d4852;
-}
-
-a:hover,
-a:active {
-  outline: 0;
-}
-
-a.button {
-  align-items: center;
-  background-color: #3d4852;
-  border: 1px solid #3d4852;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  display: inline-flex;
-  padding: 0.25rem 0.75rem;
-  text-decoration: none;
-  transition: all 0.25s ease-in-out;
-}
-
-a.button:hover,
-a.button:focus {
-  background-color: #58636F;
-  box-shadow: 0 0 2px 2px #bac6d3;
-}
-
-a.button:focus {
-  outline: 1px solid #3d4852;
-}
-
-a.button:visited {
-  color: #fff;
 }
 
 ul {
