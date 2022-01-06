@@ -4,7 +4,7 @@
       <ul class="carousel-items">
         <li class="carousel-item">
           <div class="card">
-            <h2 class="card-title" v-for="movie in movies" :key="movie.id"> {{ movie.title }}</h2>
+            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{movies}}</h2>
             <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
@@ -40,7 +40,7 @@
         </li>
         <li class="carousel-item">
           <div class="card">
-            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{movie.title}}</h2>
+            <h2 class="card-title"></h2>
             <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
@@ -62,6 +62,9 @@
 </template>
 
 <script>
+
+console.log();
+
   export default {
     name: 'Slider',
     props: [
@@ -81,6 +84,7 @@ h1 {
 h2 {
   font-size: 1.25rem;
   margin-top: 0;
+  color: #fff;
 }
 
 ul {

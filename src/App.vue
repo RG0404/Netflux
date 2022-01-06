@@ -1,7 +1,4 @@
 <template>
-
-  
-
   <Navbar 
     :logo="require('./assets/logo-netflux.png')" 
     :profile="require('./assets/photo-user.png')"
@@ -9,7 +6,7 @@
 
   <HeroBanner/>
 
-  <Slider/>
+  <Slider :movies="movies"/>
   
 </template>
 
