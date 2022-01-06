@@ -10,6 +10,9 @@
           :series="series"
           :soon="soon"
           :popular="popular" />
+  <footer>
+    <Footer/>
+  </footer>
   
 </template>
 
@@ -17,11 +20,13 @@
 import Navbar from "./components/Navbar.vue";
 import HeroBanner from "./components/HeroBanner.vue"
 import Slider from "./components/Slider";
+import Footer from "./components/Footer";
 
 export default {
   name: 'App',
 
   components: {
+    Footer,
     Slider,
     Navbar,
     HeroBanner
@@ -96,8 +101,6 @@ export default {
     this.getTvData();
     this.getComingSoonData();
     this.getMostPopularData();
-
-    console.log('toto');
   }
 
 }
