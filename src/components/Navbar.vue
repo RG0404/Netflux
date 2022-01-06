@@ -66,7 +66,6 @@ window.addEventListener('scroll', function() {
         top: 0;
         left: 0;
         right: 0;
-        /* background-color: rgb(20, 20, 20); */
         z-index: 10;
         transition: all;
         transition-duration: 500ms;
