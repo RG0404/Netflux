@@ -5,7 +5,7 @@
         <div class="main-container">
 
             <div class="left-container">
-                <img :src="image" alt="logo" class="logo-netflux">
+                <img :src="logo" alt="logo" class="logo-netflux">
                 <div class="menu-items">
                     <a href="#">Accueil</a>
                     <a href="#">Séries</a>
@@ -16,7 +16,10 @@
             </div>
 
             <div class="right-container">
-
+                <i class="fas fa-search"></i>
+                <a href="#">DIRECT</a>
+                <i class="fas fa-bell"></i>
+                <img :src="profile" alt="profile" class="profile-photo">
             </div>
 
         </div>
@@ -33,7 +36,8 @@ export default {
     
   },
   props: [
-      'image'
+      'logo',
+      'profile',
   ]
 }
 
@@ -45,6 +49,18 @@ export default {
         height: 70px;
         widows: 100%;
         background-color: green;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(20, 20, 20);
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
     }
 
     .logo-netflux {
@@ -55,6 +71,7 @@ export default {
     .menu-items {
         display: flex;
         gap: 12px;
+        margin-left: 30px;
     }
 
     .menu-items a {
@@ -65,6 +82,31 @@ export default {
     .left-container {
         display: flex;
         align-items: center;
+        margin-left: 30px;
+    }
+
+    .right-container {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+        gap: 20px;
+    }
+
+    .right-container i {
+        color: #fff;
+        height: 18px;
+        widows: 26px;
+    }
+
+    .right-container a {
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .profile-photo {
+        width: 32px;
+        height: 32px;
+        border-radius: 18%;
     }
 
 </style>

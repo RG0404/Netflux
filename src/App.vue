@@ -1,6 +1,9 @@
 <template>
   
-  <Navbar :image= "require('./assets/logo-netflux.png')" />
+  <Navbar 
+    :logo="require('./assets/logo-netflux.png')" 
+    :profile="require('./assets/photo-user.png')"
+  />
   
 </template>
 
