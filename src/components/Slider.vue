@@ -4,7 +4,7 @@
       <ul class="carousel-items">
         <li class="carousel-item">
           <div class="card">
-            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{movies}}</h2>
+            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{ movie.rank}}</h2>
             <img src="https://placeimg.com/572/322/animals" alt=""/>
           </div>
         </li>
@@ -62,9 +62,6 @@
 </template>
 
 <script>
-
-console.log();
-
   export default {
     name: 'Slider',
     props: [
