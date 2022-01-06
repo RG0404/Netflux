@@ -59,10 +59,20 @@
   overflow: scroll;
 }
 
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   width: 400px;
   height: 400px;
   margin: 20px;
+  transition: ease-in-out;
+  transition-duration: 200ms;
+}
+
+img:hover {
+  transform: scale(1.1);
 }
 
 h1 {

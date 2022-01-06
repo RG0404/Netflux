@@ -14,7 +14,7 @@
                     </div>
                 </a>
                 <a href="#">
-                    <div class="button-info">
+                    <div id="myBtn">
                         <i class="fas fa-info-circle"></i>
                         <div class="button-info-p">Plus d'infos</div>
                     </div>
@@ -35,6 +35,11 @@
         </div>
 
     </div>
+
+
+
+
+    
   
 </template>
 
@@ -50,6 +55,10 @@ export default {
   ]
 }
 
+
+
+
+
 </script>
 
 <style scoped>
@@ -58,7 +67,6 @@ export default {
         position: relative;
         width: 100%;
         height: 100vh;
-        /* margin-top: 70px; */
         background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0),  rgba(20, 20, 20, 1)), linear-gradient(to top, rgba(20, 20, 20, 0),  rgba(20, 20, 20, 0.5)), url(../assets/hero-banner.jpg);
         background-size: cover;
         display: flex;
@@ -105,7 +113,7 @@ export default {
         font-size: 20px;
     }
 
-    .button-info {
+    #myBtn {
         width: 164px;
         height: 40px;
         background-color: rgba(109,109,110,0.9);
@@ -119,7 +127,7 @@ export default {
         font-weight: bold;
     }
 
-    .button-info i {
+    #myBtn i {
         font-size: 20px;
     }
 
