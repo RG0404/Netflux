@@ -6,7 +6,8 @@
 
   <HeroBanner/>
 
-  <Slider :movies="movies"/>
+  <Slider :movies="movies"
+          :series="series" />
   
 </template>
 
@@ -27,9 +28,19 @@ export default {
   methods: {
     async getMovieData() {
       try {
-        let response = await fetch("https://imdb-api.com/en/API/Top250Movies/k_vsnmlp8s");
+        let response = await fetch("https://imdb-api.com/fr/API/Top250Movies/k_vsnmlp8s");
         let movies = await response.json();
         this.movies = movies.items;
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    async getTvData() {
+      try {
+        let response = await fetch("https://imdb-api.com/fr/API/Top250TVs/k_vsnmlp8s");
+        let series = await response.json();
+        this.series = series.items;
       } catch (error) {
         console.log(error);
       }
@@ -40,12 +51,17 @@ export default {
     return {
       movies: [
 
-      ]
+      ],
+
+      series: [
+
+      ],
     }
   },
 
   mounted() {
     this.getMovieData();
+    this.getTvData();
   }
 
 }

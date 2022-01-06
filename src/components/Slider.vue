@@ -1,59 +1,21 @@
 <template>
   <div>
     <section class="carousel">
+      <h1>Top 250 des meilleurs films</h1>
       <ul class="carousel-items">
-        <li class="carousel-item">
+        <li class="carousel-item" v-for="item in movies" :key="item.id">
           <div class="card">
-            <h2 class="card-title" v-for="movie in movies" :key="movie.id">{{ movie.rank}}</h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
+            <h2 class="card-title" >{{ item.title }}</h2>
+            <img :src="item.image" >
           </div>
         </li>
-        <li class="carousel-item">
+      </ul>
+
+      <ul class="carousel-items">
+        <li class="carousel-item" v-for="item in series" :key="item.id">
           <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt=""/>
-          </div>
-        </li>
-        <li class="carousel-item">
-          <div class="card">
-            <h2 class="card-title"></h2>
-            <img src="https://placeimg.com/572/322/animals" alt="" />
+            <h2 class="card-title" >{{ item.title }}</h2>
+            <img :src="item.image" >
           </div>
         </li>
       </ul>
@@ -66,16 +28,22 @@
     name: 'Slider',
     props: [
         'movies',
+        'series'
     ]
   }
 </script>
 
 <style scoped>
 
+.carousel {
+  margin-top: 5%;
+  margin: 2rem 2rem 1rem;
+}
+
 h1 {
   font-size: 2rem;
-  margin: 2rem auto 1rem;
   line-height: 1;
+  color: #fff;
 }
 
 h2 {
@@ -136,6 +104,7 @@ header {
   overflow-x: scroll;
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
+  margin-top: 5%;
 }
 
 .carousel-item {
