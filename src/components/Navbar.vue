@@ -43,7 +43,7 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 
     nav {
         height: 70px;
@@ -54,6 +54,7 @@ export default {
         left: 0;
         right: 0;
         background-color: rgb(20, 20, 20);
+        z-index: 10;
     }
 
     .main-container {
