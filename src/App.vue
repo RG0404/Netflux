@@ -1,5 +1,7 @@
 <template>
-  
+
+  <pre>{{movies}}</pre>
+
   <Navbar 
     :logo="require('./assets/logo-netflux.png')" 
     :profile="require('./assets/photo-user.png')"
@@ -22,7 +24,26 @@ export default {
   },
 
   methods: {
+    async getMovieData() {
+      try {
+        let response = await fetch("https://imdb-api.com/en/API/Top250Movies/k_vsnmlp8s");
+        this.movies = await response.json();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  },
 
+  data() {
+    return {
+      movies: [
+
+      ]
+    }
+  },
+
+  mounted() {
+    this.getMovieData();
   }
 
 }
