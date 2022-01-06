@@ -1,6 +1,6 @@
 <template>
   
-    <nav>
+    <nav class="opacity-0">
 
         <div class="main-container">
 
@@ -41,6 +41,20 @@ export default {
   ]
 }
 
+let scrollpos = window.scrollY
+
+window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
+    let header = document.querySelector("nav");
+    if (scrollpos > 0 && header.classList.contains('opacity-0')) {
+        header.classList.add('opacity-1');
+        header.classList.remove('opacity-0');
+    } else if (scrollpos == 0) {
+        header.classList.add('opacity-0');
+        header.classList.remove('opacity-1');
+    }
+})
+
 </script>
 
 <style scoped>
@@ -48,13 +62,22 @@ export default {
     nav {
         height: 70px;
         widows: 100%;
-        background-color: green;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
-        background-color: rgb(20, 20, 20);
+        /* background-color: rgb(20, 20, 20); */
         z-index: 10;
+        transition: all;
+        transition-duration: 500ms;
+    }
+
+    .opacity-0 {
+        background-color: rgba(20, 20, 20, 0)
+    }
+
+    .opacity-1 {
+        background-color: rgba(20, 20, 20, 1)
     }
 
     .main-container {

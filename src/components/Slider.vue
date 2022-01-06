@@ -96,6 +96,11 @@ header {
   padding: 1rem;
 }
 
+.card img {
+  width: 400px;
+  height: 300px;
+}
+
 /********************************
 * Carousel styles
 *********************************/

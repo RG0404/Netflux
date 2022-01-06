@@ -57,9 +57,9 @@ export default {
     .hero-container {
         position: relative;
         width: 100%;
-        height: calc(100vh - 70px);
-        margin-top: 70px;
-        background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 1)), url(../assets/hero-banner.jpg);
+        height: 100vh;
+        /* margin-top: 70px; */
+        background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0),  rgba(20, 20, 20, 1)), linear-gradient(to top, rgba(20, 20, 20, 0),  rgba(20, 20, 20, 0.5)), url(../assets/hero-banner.jpg);
         background-size: cover;
         display: flex;
         align-items: center;
