@@ -28,7 +28,8 @@ export default {
     async getMovieData() {
       try {
         let response = await fetch("https://imdb-api.com/en/API/Top250Movies/k_vsnmlp8s");
-        this.movies = await response.json();
+        let movies = await response.json();
+        this.movies = movies.items;
       } catch (error) {
         console.log(error);
       }
