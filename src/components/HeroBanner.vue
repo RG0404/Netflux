@@ -59,7 +59,7 @@ export default {
         width: 100%;
         height: calc(100vh - 70px);
         margin-top: 70px;
-        background-image: url("../assets/hero-banner.jpg");
+        background-image: linear-gradient(to bottom, rgba(20, 20, 20, 0), rgba(20, 20, 20, 1)), url(../assets/hero-banner.jpg);
         background-size: cover;
         display: flex;
         align-items: center;
@@ -127,6 +127,44 @@ export default {
         position: absolute;
         right: 0;
         top: 60vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-refresh {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 0.5px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        margin-right: 20px;
+    }
+
+    .hero-age {
+        width: 78px;
+        height: 28px;
+        display: flex;
+    }
+
+    .hero-warning-hr {
+        height: 28px;
+        width: 3px;
+        background-color: #fff;
+    }
+
+    .hero-warning-box {
+        background-color: rgba(20, 20, 20, 0.5);
+        width: 78px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .hero-warning-box p {
+        margin-left: 8px;
     }
 
 </style>

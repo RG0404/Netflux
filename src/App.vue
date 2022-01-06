@@ -1,6 +1,6 @@
 <template>
 
-  <pre>{{movies}}</pre>
+  
 
   <Navbar 
     :logo="require('./assets/logo-netflux.png')" 
