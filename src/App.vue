@@ -4,15 +4,19 @@
     :logo="require('./assets/logo-netflux.png')" 
     :profile="require('./assets/photo-user.png')"
   />
+
+  <Slider/>
   
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue"
+import Slider from "./components/Slider";
 
 export default {
   name: 'App',
   components: {
+    Slider,
     Navbar
   }
 }
